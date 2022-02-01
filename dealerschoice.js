@@ -16,7 +16,7 @@ server.get('/', (req, res, next)=>{
             <link rel="stylesheet" href="/style.css"/>
             </head>
             <body>
-                <h1>The Worst Foods</h1>
+                <h1 id="mytitle">My Least Favorite Foods</h1>
                     ${
                         badFoods.map(item=>{
                             return `
@@ -41,7 +41,7 @@ server.get('/food/:name', (req, res)=>{
                     <link rel="stylesheet" href="/style.css"/>
                 </head>
                 <body>
-                <div><a href="/">Go Home</a></div>
+                <div><a href="/" class = "home">Go back to the promise land</a></div>
                 </body>
             </html>
             `
@@ -59,7 +59,10 @@ server.get('/food/:name', (req, res)=>{
                     <h1>${foodName.name}</h1>
                     <p><div>Why I don't like it:</div>${foodName.description}</p>
                     <div>Rating: ${foodName.rating}/10</div>
-                    <div><a href="/">Go back</a></div>
+                    <div>
+                        <img src = "/${foodName.name}.jpeg">
+                    </div>
+                    <div><a href="/" class = "home">Go back</a></div>
                 </body>
             </hmtl>
         `

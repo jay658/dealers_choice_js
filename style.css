@@ -1,10 +1,26 @@
 *{
     text-align: center;
     background-color:brown;
-    color:yellow
+    color:yellow;
+    font-family: Calibri;
 }
 
-ul{
-    list-style-type:none
+div a{
+    color:limegreen;
+    text-decoration: none;
+}
+
+.home{
+    color: blue
+}
+
+img {
+    object-fit:cover;
+    width: 500px;
+    height:500px;
+}
+
+#mytitle{
+    text-decoration: underline;
 }
 
